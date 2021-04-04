@@ -1,0 +1,19 @@
+<div class="row no-gutters">
+  <aside class="fe-sidebar">
+    <div class="fe-logo"></div>
+  </aside>
+  <main class="col fe-main">
+    <nav class="fe-global-nav"></nav>
+    <div class="container">
+      <div class="fe-page-header">
+        <h1>Animals by Class</h1>
+      </div>
+      <div class="row fe-card-section" *ngFor="let class of animalsByClass | keyvalue">
+        <h2 class="col-12" [textContent]="class.key | titlecase"></h2>
+        <div class="col-12 col-lg-4" *ngFor="let animal of class.value">
+          <fe-animal-card [animal]="animal"></fe-animal-card>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

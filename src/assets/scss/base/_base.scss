@@ -1,0 +1,32 @@
+// Base styles
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: $fe-c-muted-vl;
+  color: $fe-c-muted-d;
+  font-size: 0.875rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.label {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #666E84;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.fe-page-header {
+  padding: $spacer * 2 0 $spacer;
+}

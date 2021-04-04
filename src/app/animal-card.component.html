@@ -1,0 +1,32 @@
+<div class="fe-card">
+  <div class="fe-card__content-wrapper">
+    <h3 class="fe-card__title" [textContent]="animal.name | titlecase"></h3>
+    <p class="fe-card__detail">
+      <span class="label">
+        <svg class="fe-svg-icon fe-svg-icon--label">
+          <use href="#fe-svg-icon--dna" xlink:href="#fe-svg-icon--dna" />
+        </svg>
+        Scientific Name:
+      </span>
+      <span [textContent]="animal.scientificName"></span>
+    </p>
+    <p class="fe-card__detail">
+      <span class="label">
+        <svg class="fe-svg-icon fe-svg-icon--label">
+          <use href="#fe-svg-icon--heartbeat" xlink:href="#fe-svg-icon--heartbeat" />
+        </svg>
+        Lifespsan:
+      </span>
+      <span [textContent]="animal.lifespan"></span>
+    </p>
+    <p class="fe-card__detail">
+      <span class="label">
+        <svg class="fe-svg-icon fe-svg-icon--label">
+          <use href="#fe-svg-icon--weight" xlink:href="#fe-svg-icon--weight" />
+        </svg>
+        Mass:
+      </span>
+      <span [textContent]="animal.mass"></span>
+    </p>
+  </div>
+</div>

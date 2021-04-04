@@ -1,0 +1,25 @@
+// Navigation
+
+.fe-sidebar {
+  display: none;
+  width: 190px;
+  min-width: 190px;
+  min-height: 100vh;
+  background: $fe-c-primary-d;
+
+  @include screen('lg') {
+    display: block;
+  }
+}
+
+.fe-logo {
+  height: $nav-height;
+  box-shadow: $box-shadow-100;
+  background: $fe-c-primary;
+}
+
+.fe-global-nav {
+  height: $nav-height;
+  background-color: $fe-c-white;
+  box-shadow: $box-shadow-100;
+}

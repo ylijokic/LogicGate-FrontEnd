@@ -1,0 +1,47 @@
+// Card styles
+
+.fe-card {
+  height: 100%;
+  padding-bottom: $spacer;
+
+  @include screen('lg') {
+    padding-bottom: $spacer * 2;
+  }
+}
+
+.fe-card__content-wrapper {
+  height: 100%;
+  background: $fe-c-white;
+  box-shadow: $box-shadow-100;
+  border-top: 6px solid $fe-c-muted-d;
+  padding: $spacer;
+}
+
+.fe-card-section:nth-child(4n+1) .fe-card__content-wrapper {
+  border-color: $fe-c-violet;
+}
+
+.fe-card-section:nth-child(4n+2) .fe-card__content-wrapper{
+  border-color: $fe-c-magenta;
+}
+
+.fe-card-section:nth-child(4n+3) .fe-card__content-wrapper {
+  border-color: $fe-c-cobalt;
+}
+
+.fe-card-section:nth-child(4n+4) .fe-card__content-wrapper{
+  border-color: $fe-c-lawn-green;
+}
+
+.fe-card__title {
+  font-weight: 600;
+}
+
+.fe-card__detail {
+  display: flex;
+  margin-bottom: 5px;
+
+  .label {
+    margin-top: 3px;
+  }
+}

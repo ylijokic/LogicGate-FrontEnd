@@ -1,0 +1,21 @@
+// Icon styles
+
+.fe-svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 0;
+  stroke: inherit;
+  fill: inherit;
+}
+
+.fe-svg-icon--label {
+  vertical-align: top;
+  margin-top: 2px;
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  stroke: $fe-c-smoke;
+  fill: $fe-c-smoke;
+}
