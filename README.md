@@ -64,6 +64,8 @@ We will be using the following criteria for grading your submission. Here’s wh
 
 * Organization/Naming: how clean your code is and how clearly you name variables, etc.
 
+* Readability: your code is easy to read and understand.
+
 * Ability to follow specific instructions: you followed all instructions we provided.
 
 * Ability to follow existing code patterns: you took existing code into consideration when writing your code.
