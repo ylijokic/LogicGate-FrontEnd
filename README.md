@@ -1,3 +1,5 @@
+[LINK TO WRITEUP](https://github.com/ylijokic/LogicGate-FrontEnd/blob/main/WRITEUP.md)
+
 # Welcome to the LogicGate Front End Code Challenge
 
 This repository contains an Angular application. Start by downloading the zip file or cloning this project to your local machine:
