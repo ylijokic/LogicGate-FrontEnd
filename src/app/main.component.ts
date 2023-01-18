@@ -36,8 +36,41 @@ export class MainComponent implements OnInit {
   // These lists should not contain duplicates and should be alphabetized from
   // "A" to "z".
   public getAnimalsByClass(animals: IStringMap<Animal[]>): IStringMap<Animal[]> {
-    // Add your code here.
-    // Run `ng test` to see if your code passes.
-    return {};
+    // 1. Create flattened array of all animals
+    const flattenedAnimalsArray: Animal[] = [].concat(...Object.values(animals));
+
+    // 2. Set to keep track of unique animals
+    const uniqueAnimalIds = new Set<string>();
+
+    // 3. Build output IStringMap
+    const animalsGroupedByClass = flattenedAnimalsArray.reduce(
+      (animalClassMap, currAnimal) => {
+        // 4. Only add unique animals
+        if (!uniqueAnimalIds.has(currAnimal.id)) {
+          // 5. Get list of Animals for class
+          animalClassMap[currAnimal.class] = animalClassMap[currAnimal.class] ?? [];
+
+          // 6. Add Animal to class key
+          animalClassMap[currAnimal.class].push(currAnimal);
+
+          // 7. Store Animal Id to avoid duplicates
+          uniqueAnimalIds.add(currAnimal.id);
+        }
+        return animalClassMap;
+      },
+      {} as IStringMap<Animal[]>
+    );
+
+    // 8. Sort Animals in alphabetic order
+    Object.entries(animalsGroupedByClass).forEach((entry: [string, Animal[]]) => {
+      const [animalClass, animalsForClass] = entry;
+      animalsGroupedByClass[animalClass] = animalsForClass.sort(
+        (a: Animal, b: Animal) => {
+          return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+        }
+      );
+    });
+
+    return animalsGroupedByClass;
   }
 }
